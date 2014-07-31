@@ -1,0 +1,1 @@
+Parameterization face-2.obj
