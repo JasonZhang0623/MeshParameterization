@@ -47,7 +47,7 @@ void MeshPara::make_check_image()
 	{
 		for (j = 0; j < IMAGESIZE; j++)
 		{
-			c = ((((i & 0x2) == 0) ^ ((j & 0x2)) == 0)) * 255;
+			c = ((((i & 0x2) == 0) ^ ((j & 0x2)) == 0)) * 215 + 40;
 			check_image[i][j][0] = (GLubyte)c;
 			check_image[i][j][1] = (GLubyte)c;
 			check_image[i][j][2] = (GLubyte)c;
