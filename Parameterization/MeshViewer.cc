@@ -158,3 +158,20 @@ void MeshViewer::draw(const std::string& _draw_mode)
     glDisableClientState(GL_NORMAL_ARRAY);
   }
 }
+
+void MeshViewer::keyboard(int key, int x, int y)
+{
+	OpenMesh::IO::Options opt = OpenMesh::IO::Options::VertexTexCoord;
+
+	switch (key)
+	{
+	case 's':
+	case 'S':
+		std::cout << "Saving Mesh." << std::endl;
+		OpenMesh::IO::write_mesh(mesh_, "rst.obj", opt);
+		break;
+	default:
+		GlutViewer::keyboard(key, x, y);
+		break;
+	}
+}

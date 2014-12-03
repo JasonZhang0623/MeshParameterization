@@ -46,11 +46,14 @@ public:
 	/// open mesh
 	virtual bool open_mesh(const char* _filename);
 
-	/// update buffer with face indices
-	void update_face_indices();
-
+protected:
 	/// draw the scene
 	virtual void draw(const std::string& _draw_mode);
+	virtual void keyboard(int key, int x, int y);
+
+private:
+	/// update buffer with face indices
+	void update_face_indices();
 
 protected:
 	Mesh  mesh_;
